@@ -44,6 +44,8 @@ androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTes
 androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTestExt" }
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
 accompanist-coil = { module = "com.github.skydoves:landscapist-coil", version.ref = "composeCoil" }
+accompanist-placeholder = { module = "com.github.skydoves:landscapist-placeholder", version.ref = "composeCoil" }
+accompanist-animation = { module = "com.github.skydoves:landscapist-animation", version.ref = "composeCoil" }
 accompanist-systemcontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "systemuicontroller" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }

@@ -23,6 +23,8 @@ import com.chaliez.alma.test.data.repository.marvel.fakeMarvelHeroes
 import com.chaliez.alma.test.data.model.MarvelHero
 import com.skydoves.landscapist.ImageOptions
 import com.skydoves.landscapist.coil.CoilImage
+import com.skydoves.landscapist.components.rememberImageComponent
+import com.skydoves.landscapist.placeholder.shimmer.ShimmerPlugin
 
 @Composable
 internal fun MarvelHeroItemRow(
@@ -48,6 +50,13 @@ internal fun MarvelHeroItemRow(
                     contentDescription = "Hero thumbnail",
                     contentScale = ContentScale.Crop // crop the image
                 ),
+                component = rememberImageComponent {
+                    // shows a shimmering effect when loading an image.
+                    +ShimmerPlugin(
+                        baseColor = Color.Gray,
+                        highlightColor = Color.White
+                    )
+                },
                 modifier = Modifier
                     .size(64.dp)
                     .padding(12.dp)

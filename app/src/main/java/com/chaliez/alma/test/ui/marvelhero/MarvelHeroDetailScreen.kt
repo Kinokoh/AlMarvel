@@ -27,7 +27,9 @@ import com.chaliez.alma.test.ui.components.FireButton
 import com.chaliez.alma.test.ui.components.RecruitButton
 import com.chaliez.alma.test.ui.components.ShowProgressBar
 import com.skydoves.landscapist.ImageOptions
+import com.skydoves.landscapist.animation.crossfade.CrossfadePlugin
 import com.skydoves.landscapist.coil.CoilImage
+import com.skydoves.landscapist.components.rememberImageComponent
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class) //Scaffold
@@ -122,6 +124,11 @@ internal fun MarvelHeroDetailScreen(
                     contentDescription = "Hero thumbnail",
                     contentScale = ContentScale.Crop // crop the image
                 ),
+                component = rememberImageComponent {
+                    +CrossfadePlugin(
+                        duration = 550
+                    )
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .aspectRatio(1f)
